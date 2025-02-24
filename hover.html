@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="aa" class="bb"></div>
+        <div id="bb" class="bb"  onmouseover="myDemo()" onmouseout="myTest()"></div>
+        <div id="cc" class="bb"  onmouseover="myDemo()" onmouseout="myTest()"></div>
+        <div id="dd" class="bb"  onmouseover="myDemo()" onmouseout="myTest()"></div>
+    </div>
+</body>
+<script>
+    var main=document.getElementById("a");
+    main.style.width="100%";
+    main.style.height="600px";
+    main.style.display="flex";
+    main.style.background="teal";
+    main.style.alignItems="center";
+    main.style.justifyContent="space-evenly";
+    var first=document.getElementById("aa");
+    first.style.width="30%";
+    first.style.height="80%";
+    first.style.background="red";
+    first.style.transition="1s";
+    var second=document.getElementById("bb");
+    second.style.width="20%";
+    second.style.height="60%";
+    second.style.background="red";
+    second.style.transition="1s";
+    var tr=document.getElementById("cc");
+    tr.style.width="20%";
+    tr.style.height="60%";
+    tr.style.background="red";
+    tr.style.transition="1s";
+    var four=document.getElementById("dd");
+    four.style.width="20%";
+    four.style.height="60%";
+    four.style.background="red";
+    function myDemo(){
+        if(second.style.width=="20%" && second.style.height=="60%"){
+            second.style.width="30%";
+            second.style.height="80%";
+            first.style.width="20%";
+            first.style.height="60%";
+            tr.style.width="20%";
+            tr.style.height="60%";
+
+        }
+    }
+    
+    function myTest(){
+        if(second.style.width=="30%" && second.style.height=="80%"){
+            second.style.width="20%";
+            second.style.height="60%";
+            first.style.width="30%";
+            first.style.height="80%";
+            tr.style.width="20%";
+            tr.style.height="60%";
+        }
+    }
+    function myDemo(){
+        if(tr.style.width=="20%" && tr.style.height=="60%"){
+            // second.style.width="20%";
+            // second.style.height="60%";
+            first.style.width="20%";
+            first.style.height="60%";
+            tr.style.width="30%";
+            tr.style.height="80%";
+        }
+    }
+    function myTest(){
+        if(tr.style.width=="30%" && tr.style.height=="80%"){
+            tr.style.width="20%";
+            tr.style.height="60%";
+            first.style.width="30%";
+            first.style.height="80%";
+        }
+    }
+</script>
+</html>
